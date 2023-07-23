@@ -1,15 +1,15 @@
 'use client';
 
 import { Menu, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
 import { Fragment, useState } from 'react';
+import { BiChevronDown } from 'react-icons/bi';
 import ItemMenuHeader from './ItemMenuHeader';
 import CloseMenu from './CloseMenu';
 
 export default function MenuHeader() {
   const [isShowing, setIsShowing] = useState(false);
   return (
-    <Menu as="div" className="inline-block text-left">
+    <Menu as="div" className="inline-block text-left mr-8">
       <div>
         <Menu.Button
           id="menu-button"
@@ -20,7 +20,7 @@ export default function MenuHeader() {
           onClick={ () => setIsShowing(!isShowing) }
         >
           Menu
-          <ChevronDownIcon
+          <BiChevronDown
             className="ml-2 -mr-1 h-5 w-5 text-white"
             aria-hidden="true"
           />

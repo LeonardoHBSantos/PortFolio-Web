@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import Logo from '../assets/images/logo.svg';
 
 import MenuHeader from './MenuHeader/MenuHeader';
 import { LinkHeader } from './MenuHeader/LinkHeader';
@@ -17,16 +19,20 @@ export default function Header() {
       window.removeEventListener('resize', atualizarLarguraDaTela);
     };
   }, []);
-  const minWidth = 640;
+  const minWidth = 732;
   return (
     <header
-      className={ `${widthScreen <= minWidth ? 'justify-end' : 'justify-center'}
-      flex h-16 items-center mx-8` }
+      className="flex h-16 items-center justify-between"
     >
+      <Image
+        src={ Logo }
+        alt="Leonardo Santos"
+        className="max-sm:w-32 my-8 ml-8 w-36"
+      />
       {widthScreen <= minWidth ? <MenuHeader /> : (
         <nav
           className="flex justify-between w-auto rounded-full
-        bg-neutral-700 p-3 items-center"
+        bg-neutral-800 items-center mr-8"
         >
           <LinkHeader link="/" name="Página Inicial" />
           <LinkHeader link="/projects" name="Projetos" />
