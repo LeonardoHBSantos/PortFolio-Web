@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Header from './components/Header';
 import Photo from './assets/images/profile.jpg';
 import SocialMedia from './components/SocialMedia';
+import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           </p>
           <SocialMedia />
         </section>
+        <ProjectsSection />
       </main>
     </>
   );
