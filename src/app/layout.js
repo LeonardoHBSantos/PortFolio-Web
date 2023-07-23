@@ -7,11 +7,6 @@ const poppins = Poppins({
   weight: ['100', '400', '700'],
 });
 
-// export const metadata = {
-//   title: 'Leonardo Santos - Portfolio',
-//   description: 'Leonardo Santos - Portfolio',
-// };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
